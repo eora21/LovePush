@@ -141,7 +141,7 @@ const ClientContextProvider = ({ children }: IPropsClientContextProvider) => {
     setSignal(true);
     setTimeout(() => {
       setSignal(false);
-    }, 10000);
+    }, 4000);
   };
 
   const client = useMemo(
@@ -324,6 +324,8 @@ const ClientContextProvider = ({ children }: IPropsClientContextProvider) => {
 
     const values = sectorData.map((v) => sessions.map((k) => v[k])).flat();
 
+    console.log(values);
+    
     const users = new Set(values.map((v) => v.pk));
     users.delete(seq);
     users.delete(0);

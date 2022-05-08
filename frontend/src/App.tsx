@@ -12,7 +12,7 @@ import AboutService from './pages/AboutService';
 import NotFound from './pages/NotFound';
 
 import CustomAlert from './components/Atoms/CustomAlert';
-import { ChatTest } from './components/ChatTest';
+import {Str} from './components/Str';
 import ChatLobby from './components/Templetes/ChatLobby';
 import LocationPage from './components/Templetes/LocationPage';
 import MainPage from './components/Templetes/MainPage';
@@ -59,6 +59,7 @@ function App() {
             <Route path="/storybook" element={<StoryBook />} />
             <Route path="/chatroom/:pk" element={<MakeChatRoomList />} />
             <Route path="/about-service/:pageId" element={<AboutService />} />
+            <Route path="/str" element={<Str />} />
             <Route path="*" element={<NotFound />} />
           </GARoutes>
         </BrowserRouter>
